@@ -1,0 +1,7 @@
+mod "puppetlabs/firewall"
+mod "puppetlabs/inifile"
+mod "puppetlabs/pe_gem"
+mod "puppetlabs/stdlib"
+mod "seteam/profile"
+mod "seteam/role"
+mod 'jay/console_env'

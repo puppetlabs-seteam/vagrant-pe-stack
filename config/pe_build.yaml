@@ -1,0 +1,4 @@
+---
+# pe_build:
+#   version: "0.0.0"
+#   download_root: 'http://path/to/pe-builds/0.0.0'

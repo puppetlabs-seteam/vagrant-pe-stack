@@ -1,0 +1,137 @@
+{
+  "name": "puppetlabs-inifile",
+  "version": "1.0.0",
+  "source": "git://github.com/puppetlabs/puppetlabs-inifile.git",
+  "author": "Puppetlabs",
+  "license": "Apache",
+  "summary": "Resource types for managing settings in INI files",
+  "description": "Resource types for managing settings in INI files",
+  "project_page": "https://github.com/puppetlabs/puppetlabs-inifile",
+  "dependencies": [
+
+  ],
+  "types": [
+    {
+      "name": "ini_setting",
+      "doc": "",
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        },
+        {
+          "name": "value",
+          "doc": "The value of the setting to be defined."
+        }
+      ],
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "An arbitrary name used as the identity of the resource."
+        },
+        {
+          "name": "section",
+          "doc": "The name of the section in the ini file in which the setting should be defined."
+        },
+        {
+          "name": "setting",
+          "doc": "The name of the setting to be defined."
+        },
+        {
+          "name": "path",
+          "doc": "The ini file Puppet will ensure contains the specified setting."
+        },
+        {
+          "name": "key_val_separator",
+          "doc": "The separator string to use between each setting name and value. Defaults to \" = \", but you could use this to override e.g. whether or not the separator should include whitespace."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ruby",
+          "doc": ""
+        }
+      ]
+    },
+    {
+      "name": "ini_subsetting",
+      "doc": "",
+      "properties": [
+        {
+          "name": "ensure",
+          "doc": "The basic property that the resource should be in.  Valid values are `present`, `absent`."
+        },
+        {
+          "name": "value",
+          "doc": "The value of the subsetting to be defined."
+        }
+      ],
+      "parameters": [
+        {
+          "name": "name",
+          "doc": "An arbitrary name used as the identity of the resource."
+        },
+        {
+          "name": "section",
+          "doc": "The name of the section in the ini file in which the setting should be defined."
+        },
+        {
+          "name": "setting",
+          "doc": "The name of the setting to be defined."
+        },
+        {
+          "name": "subsetting",
+          "doc": "The name of the subsetting to be defined."
+        },
+        {
+          "name": "subsetting_separator",
+          "doc": "The separator string between subsettings. Defaults to \" \""
+        },
+        {
+          "name": "path",
+          "doc": "The ini file Puppet will ensure contains the specified setting."
+        },
+        {
+          "name": "key_val_separator",
+          "doc": "The separator string to use between each setting name and value. Defaults to \" = \", but you could use this to override e.g. whether or not the separator should include whitespace."
+        }
+      ],
+      "providers": [
+        {
+          "name": "ruby",
+          "doc": ""
+        }
+      ]
+    }
+  ],
+  "checksums": {
+    "CHANGELOG": "1d2ab7d31e0fa7b96ff2e62a59890585",
+    "Gemfile": "144b186b7315b993411af56fd3fe17ba",
+    "Gemfile.lock": "805305e11bd3eb3ccf93779e06dec330",
+    "LICENSE": "519b25a3992e0598a9855e4ccd7f66a1",
+    "Modulefile": "db6005147c078f60dd4d33819941ffd0",
+    "README.markdown": "a373118f66eed7b342fad96bc3885584",
+    "Rakefile": "0254db5d3fc38c67a2c160d7296a24f8",
+    "lib/puppet/provider/ini_setting/ruby.rb": "19174eb75e2efa2f1e5935cd694ee87a",
+    "lib/puppet/provider/ini_subsetting/ruby.rb": "99991c9d3ccf54c2aa1fcacf491d0cfc",
+    "lib/puppet/type/ini_setting.rb": "afcd3f28b946b08db1b48fb189e6d8cf",
+    "lib/puppet/type/ini_subsetting.rb": "b4e6a659f461bcd274dcdf1b1c39db65",
+    "lib/puppet/util/external_iterator.rb": "69ad1eb930ca6d8d6b6faea343b4a22e",
+    "lib/puppet/util/ini_file/section.rb": "77757399ed9b9ce352ddcc8b8f9273c4",
+    "lib/puppet/util/ini_file.rb": "911c2fabc08bded5e364158eb49e97c4",
+    "lib/puppet/util/setting_value.rb": "a9db550b94d66164b8643612dbf7cbb2",
+    "spec/classes/inherit_test1_spec.rb": "56bbfd63e770b180abc3fd7e331de2fb",
+    "spec/fixtures/modules/inherit_ini_setting/lib/puppet/provider/inherit_ini_setting/ini_setting.rb": "15949e27a64f4768a65fc01ca8d0c90d",
+    "spec/fixtures/modules/inherit_ini_setting/lib/puppet/type/inherit_ini_setting.rb": "90f25ea0e389688a0df74f23a5ad18e7",
+    "spec/fixtures/modules/inherit_test1/manifests/init.pp": "ece5099a0da66d65a05055d22485756c",
+    "spec/spec_helper.rb": "3a33176450601775fcc0932340df9f74",
+    "spec/unit/puppet/provider/ini_setting/inheritance_spec.rb": "bbe2fb9d6805ae8cae85271e48f646b3",
+    "spec/unit/puppet/provider/ini_setting/ruby_spec.rb": "1c82228947d3d7bd32ee333068aff7f0",
+    "spec/unit/puppet/provider/ini_subsetting/ruby_spec.rb": "b05cf15a5830feb249ad7177f7d966ca",
+    "spec/unit/puppet/util/external_iterator_spec.rb": "35cc6e56e0064e496e9151dd778f751f",
+    "spec/unit/puppet/util/ini_file_spec.rb": "9090ada5867eb0333f3c543a7fd11a53",
+    "spec/unit/puppet/util/setting_value_spec.rb": "64db9b766063db958e73e713a3e584fa",
+    "tests/ini_setting.pp": "9c8a9d2c453901cedb106cada253f1f6",
+    "tests/ini_subsetting.pp": "71c82234fa8bb8cb442ff01436ce2cf3"
+  }
+}
