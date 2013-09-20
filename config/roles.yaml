@@ -10,10 +10,19 @@ roles:
     synced_folders: 
       - {host_path:  'puppet', guest_path: '/root/puppet'}
     provisioners:
-      - {type: shell, inline: "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"}
-      - {type: hosts}
-      - {type: pe_bootstrap, role: !ruby/sym master}
-      - {type: shell, inline: "/opt/puppet/bin/puppet apply --modulepath=/root/puppet/modules --exec 'include role::puppetmaster'"}
+      - type: shell
+        inline: "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
+      - type: hosts
+      - type: pe_bootstrap
+        role: :master
+      - type: shell
+        inline: |-
+          /opt/puppet/bin/puppet apply \
+            --confdir=/root/puppet \
+            --ssldir=/etc/puppetlabs/puppet/ssl \
+            --hiera_config=/root/puppet/hiera.yaml \
+            --modulepath=/root/puppet/modules \
+            --exec 'include role::puppetmaster'
 
   windows_agent:
     guest: windows

@@ -1,0 +1,9 @@
+---
+:backends:
+  - yaml
+
+:hierarchy:
+  - global
+
+:yaml:
+  :datadir: "%{settings::confdir}/hieradata"
