@@ -58,7 +58,7 @@ Copy the installer into the vagrant pe-build environment with the command:
     vagrant pe-build copy path/to/installer.tar.gz
 
 You can use the -all tarball (which is gigantic) or just the build for each platform
-you have installed. Modify the config/pe\_uild.yaml set the desired version as well.
+you have installed. Modify the config/pe\_build.yaml set the desired version as well.
 
 From this point forward everything is a standard Vagrant workflow. Commands
 like `vagrant list` will show you the machines defined and avaialble, and
