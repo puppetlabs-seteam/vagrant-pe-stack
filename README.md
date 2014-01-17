@@ -37,6 +37,7 @@ Install VirtualBox 4.2 or newer and Vagrant 1.3 or newer. The following plugins
 are also required.
 
     vagrant plugin install oscar
+    # optionially if you are using windows:
     vagrant plugin install vagrant-windows
 
 ### Installation
@@ -47,6 +48,17 @@ below.
 
     git clone git@github.com:puppetlabs-seteam/vagrant-pe-stack.git
     cd vagrant-pe-stack
+
+Vagrant pe-build plugin needs a copy of the PE installer.
+
+Download the installer from: http://info.puppetlabs.com/download-pe.html
+
+Copy the installer into the vagrant pe-build environment with the command:
+
+    vagrant pe-build copy path/to/installer.tar.gz
+
+You can use the -all tarball (which is gigantic) or just the build for each platform
+you have installed. Modify the config/pe\_uild.yaml set the desired version as well.
 
 From this point forward everything is a standard Vagrant workflow. Commands
 like `vagrant list` will show you the machines defined and avaialble, and
